@@ -4,23 +4,20 @@ A modern, lightweight, and highly customizable HTML5 media player built with no 
 
 ## 🚀 Features
 
-- ✅ **Video & Audio Support**: Native HTML5 `<video>` and `<audio>` support (optimized for video).
-- 📝 **Subtitles Support**: Load `.vtt` subtitles via `data-subtitle-src`.
-- ⚙️ **Modular Design**: Enable/disable features with a simple config.
-- 📜 **Context Menu**: Custom right-click context menu.
-- 📺 **Picture-in-Picture (PiP)**: Built-in PiP support.
-- 🖥️ **Fullscreen Toggle**: Fullscreen support for immersive playback.
-- 🎞️ **Cinematic Mode**: Dims background elements to reduce distraction.
-- 🎛️ **Settings Panel**: UI for toggling player options (e.g. subtitles, cinematic mode).
-- ➕ **Addon Support**: Plug and play additional JavaScript modules.
-- 🖼️ **SVG / Unicode Icons**: Easily switch or customize icons.
-- 📱 **Vertical video fill**: Fills vertical videos with blured video background.
-- 🖱️ **Mouse events**: Hides ui when playing
-- 📟 **Plug**: Shows a custom message before a video plays with manual or timed close window.
-- ⌛**Preload**: Preloads resources like Svg icons from `preload.js`
-
-## 📸 Preview
-![show](https://github.com/user-attachments/assets/04ec3ab0-eb2b-401a-924e-209732c358ea)
+- **Video & Audio Support**: Native HTML5 `<video>` and `<audio>` support (best for video).
+- **Subtitles Support**: Load `.vtt` subtitles via `data-subtitle-src`.
+- **Modular Design**: Enable/disable features with a simple config.
+- **Context Menu**: Custom right-click context menu.
+- **Picture-in-Picture (PiP)**: Built-in PiP support.
+- **Fullscreen Toggle**: Fullscreen support.
+- **Cinematic Mode**: Dims background elements to reduce distraction.
+- **Settings Panel**: UI for toggling player options (e.g. subtitles, cinematic mode).
+- **Addon Support**: Plug and play additional JavaScript modules (Built-in).
+- **SVG / Unicode Icons**: Easily switch between SVG icons or unicode icons.
+- **Vertical video fill**: Fills vertical videos with blured video background.
+- **Mouse events**: Hides ui when playing and shows when mouse moves.
+- **Plug**: Shows a custom message before a video plays with manual or timed close window.
+- **Preload**: Preloads resources like Svg icons from `preload.js`
 
 
 ## 🛠️ Quick Start
@@ -51,11 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
+## 📸 Preview
+
+<img src="https://github.com/user-attachments/assets/5e8983be-234c-409c-8113-8e4daaea0817" width="600" alt="player"><br>
+- *Default player UI*
+
+<img src="https://github.com/user-attachments/assets/fd78809b-7aa4-450c-93f6-df571fca1478" width="600" alt="player" ><br>
+- *Plug content showing (`videoPlug.js`)*
+
+
 ## 📚 Documentation
 
-### Configuration
+### ⚙️ Configuration
 
-Customize the player by modifying addons in `js/modules/OpenSourcePlayer.js`:
+Customize the player by modifying config in `js/modules/OpenSourcePlayer.js`:
 
 ```javascript
 const config = {
@@ -73,7 +79,7 @@ const config = {
 };
 ```
 
-### Adding Subtitles
+### 📇 Adding Subtitles
 
 To add subtitles, include the `data-subtitle-src` attribute in the video tag:
 
@@ -81,13 +87,13 @@ To add subtitles, include the `data-subtitle-src` attribute in the video tag:
 <video data-subtitle-src="path/to/subtitles.vtt">
 ```
 
-### Changing icons
+### 🖼️ Changing icons
 
 Set each icons in `controls.js -> svgIcons` from a singe icons.svg file.
 
 Currently using **Streamline Remix** icons. Supports both inline SVG and fallback Unicode.
 
-### Plug message
+### 📟 Plug message
 
 To enable a plug message, include the `data-plugId` attribute in the video tag and set it to the corresponding id from `videoPlug.js`. You can change the content, duration and auto-close in `videoPlug.js` for each id.
 
